@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
 class Diaries extends React.Component {
   constructor(props) {
     super(props);
@@ -22,10 +23,11 @@ class Diaries extends React.Component {
         .catch(() => this.props.history.push("/"));
   }
   render() {
+
     const { diaries } = this.state;
     const allDiaries = diaries.map((diary, index) => (
       <div key={index} class Name="col-md-6 col-lg-4">
-        <div className="card mb-4">
+        <div className="card mb-4 bg-warning">
           <div className="card-body">
             <h5 className="card-title">{diary.name} {diary.surname}</h5>
             <h5 className="card-title">high school class:{diary.high_school_class}</h5>
@@ -46,13 +48,10 @@ class Diaries extends React.Component {
 
     return (
       <>
-        <section className="jumbotron jumbotron-fluid text-center">
+        
+        <section className="jumbotron jumbotron-fluid bg-info text-center">
           <div className="container py-5">
             <h1 className="display-4">Diaries for every day</h1>
-            <p className="lead text-muted">
-              so there’s sure to be something
-              tempting for you to try.
-            </p>
           </div>
         </section>
         <div className="py-5">
@@ -70,6 +69,7 @@ class Diaries extends React.Component {
             </Link>
           </main>
         </div>
+        
       </>
     );
   }
