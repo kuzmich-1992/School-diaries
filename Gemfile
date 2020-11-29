@@ -38,6 +38,7 @@ gem 'webpacker'
 gem 'bootstrap'
 gem 'mini_racer', platforms: :ruby
 gem 'jquery-rails'
+gem 'react-rails-img'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
